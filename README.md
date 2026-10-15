@@ -2,9 +2,9 @@
 
 **Profile any CSV in seconds, right in your browser.** Drop in a file and get column types, missing values, distributions, data quality findings and a health score, then export the result as dbt tests or warehouse DDL.
 
-**[Live demo → kolli-jahnavi-07.github.io/datawhisperer](https://kolli-jahnavi-07.github.io/datawhisperer/)**
+**[Live demo → kolli-jahnavi-07.github.io/DataWhisperer](https://kolli-jahnavi-07.github.io/DataWhisperer/)**
 
-[![CI and deploy](https://github.com/Kolli-Jahnavi-07/datawhisperer/actions/workflows/ci.yml/badge.svg)](https://github.com/Kolli-Jahnavi-07/datawhisperer/actions/workflows/ci.yml)
+[![CI and deploy](https://github.com/Kolli-Jahnavi-07/DataWhisperer/actions/workflows/ci.yml/badge.svg)](https://github.com/Kolli-Jahnavi-07/DataWhisperer/actions/workflows/ci.yml)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6)
 ![DuckDB-WASM](https://img.shields.io/badge/DuckDB--WASM-1.32-fff000)
 
