@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DataWhisperer | Profile a CSV in your browser</title>
+  <meta name="description" content="Drop in a CSV and instantly see column types, missing values, statistics and data quality issues, plus generated dbt tests and warehouse DDL. Runs entirely in your browser with DuckDB-WASM." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233b5bdb'/%3E%3Cpath d='M7 22V10M13 22V15M19 22V8M25 22V18' stroke='white' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./" aria-label="DataWhisperer home">
+        <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor" class="brand-mark"/><path d="M7 22V10M13 22V15M19 22V8M25 22V18" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>
+        DataWhisperer
+      </a>
+      <span class="privacy" title="Files are read by DuckDB running inside this browser tab">Runs in your browser. Files never leave your computer.</span>
+      <a class="gh" href="https://github.com/Kolli-Jahnavi-07/datawhisperer" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main class="wrap" id="app">
+    <section class="start" id="start">
+      <h1>Understand any CSV in seconds.</h1>
+      <p class="lede">Column types, missing values, distributions and data quality issues for every column, computed with SQL by DuckDB inside this tab. Then take the result with you as dbt tests or warehouse DDL.</p>
+
+      <label class="drop" id="drop" for="file">
+        <input id="file" type="file" accept=".csv,.tsv,.txt,text/csv" />
+        <span class="drop-title">Drop a CSV here, or <u>choose a file</u></span>
+        <span class="drop-hint">Up to a few hundred MB. Nothing is uploaded.</span>
+      </label>
+
+      <div class="samples">
+        <span>Or try a sample:</span>
+        <button type="button" class="chip" data-sample="loan_applications.csv">Auto loan applications <small>messy, 5,040 rows</small></button>
+        <button type="button" class="chip" data-sample="store_orders.csv">Store orders <small>clean, 3,000 rows</small></button>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section id="report" hidden></section>
+  </main>
+
+  <footer class="wrap foot">
+    Built with DuckDB-WASM, TypeScript and Vite by <a href="https://saijahnavikolli.com" target="_blank" rel="noreferrer">Sai Jahnavi Kolli</a>.
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
